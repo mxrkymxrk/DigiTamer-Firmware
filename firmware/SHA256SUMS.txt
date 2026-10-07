@@ -1,0 +1,4 @@
+f94c5d786a7a8fab06ac5d10e33bf37711a6697636dc037559ea19cc410a17f0  dist/boot_app0.bin
+2a71d69b471e20c2bac7fb469f3c6a807b3ebee780e348e5889db0da849ca363  dist/bootloader.bin
+15cad7f254a367aa2eb675f65e4a327e64131777f0a863ae65aafa2fa666b76c  dist/digitamer-aipi-lite.bin
+d87e63c00a1b27ca51c3a5dd9303421134c0e7afb8158672e854e249b8f8b20a  dist/partitions.bin
