@@ -1,7 +1,7 @@
 {
   "version": "0.1.3-alpha",
   "board": "aipi_lite",
-  "sha256": "f419cebaf306d1182e612405fd9290b41e4af28bd9cb3fd6fbdb22689c59ffb4",
+  "sha256": "246acc01b05191093e045bf7547252145972e5da05670c5437e14b971384c43c",
   "firmware_url": "https://raw.githubusercontent.com/mxrkymxrk/DigiTamer-Firmware/main/firmware/digitamer-aipi-lite.bin",
-  "signature": "MEQCID800gBeAj/qdmtryiQxVqH36HoqHOHydlR+1ZaGcWB4AiAFxfPeYYXYBM7BIlItcJdPfV+Q6FhivJ5T6HOEbxHdhA=="
+  "signature": "MEQCIFzzuBd5RaVhxq7AlAXdz1S0zr17XzbMy/yeS2yHs473AiBkosBXAU5E3U3a/HP1PD4aZ9+rd9Otuaxvl5yEv2BG4g=="
 }
