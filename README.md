@@ -9,7 +9,7 @@
 [![Status](https://img.shields.io/badge/status-alpha-yellow)](#release-status)
 [![Distribution](https://img.shields.io/badge/distribution-prebuilt%20firmware-blue)](#installation)
 [![Hardware](https://img.shields.io/badge/target-AIPI%20Lite%20%2F%20ESP32--S3-2ea44f)](#supported-hardware)
-[![Installer](https://img.shields.io/badge/browser-installer-available-2ea44f)](https://mxrkymxrk.github.io/DigiTamer-Firmware/)
+[![Installer](https://img.shields.io/badge/installer-online-brightgreen)](https://mxrkymxrk.github.io/DigiTamer-Firmware/)
 
 ## [☕ Buy me a coffee](https://buymeacoffee.com/mxrkymxrk)
 
