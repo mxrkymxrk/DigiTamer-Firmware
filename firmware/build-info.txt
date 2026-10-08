@@ -1,3 +1,3 @@
-commit=6d096154b437c4f419581ec5e9cf3b8c62872b31
+commit=b4d79142764b0153b47b382b217586e17746dc58
 board=aipi_lite
 version=0.1.0-alpha
