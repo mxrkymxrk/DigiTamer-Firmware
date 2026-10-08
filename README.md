@@ -7,6 +7,7 @@
 **Raise · Train · Battle · Evolve · Discover**
 
 [![Status](https://img.shields.io/badge/status-alpha-yellow)](#release-status)
+[![Version](https://img.shields.io/badge/version-0.2.0--alpha-b9ff39)](#release-status)
 [![Distribution](https://img.shields.io/badge/distribution-prebuilt%20firmware-blue)](#installation)
 [![Hardware](https://img.shields.io/badge/target-AIPI%20Lite%20%2F%20ESP32--S3-2ea44f)](#supported-hardware)
 [![Installer](https://img.shields.io/badge/installer-online-brightgreen)](https://mxrkymxrk.github.io/DigiTamer-Firmware/)
@@ -23,13 +24,31 @@
 
 DigiTamer is an independent, unofficial, non-commercial virtual-pet firmware project. This public repository is for **prebuilt firmware distribution and installation only**. DigiTamer implementation source is maintained privately and is not distributed here.
 
-> **Alpha software:** features, gameplay balance, save structures, networking, and installation tooling may change before a stable release. The installer is present, but no public firmware should be treated as production-ready until a hardware-validated release is published.
+> **Alpha software:** features, gameplay balance, save structures, networking, and installation tooling may change before a stable release. Hardware behavior should be considered experimental until validated on the target device.
 
 ## Release status
 
-Development includes a persistent virtual-pet lifecycle, branching evolution, care mechanics, CPU battles, sound, battery monitoring, persistent DigiDex progress, Wi-Fi provisioning, A/B OTA partitions, HTTPS transport verification, SHA-256 firmware integrity checks, and signed OTA release metadata.
+**0.2.0-alpha is a major firmware update.** It expands DigiTamer from the initial VPet prototype into a substantially broader digital-pet system with a redesigned interface and content pipeline.
 
-The target user experience is one USB installation followed by compatible Wi-Fi firmware updates.
+Highlights include:
+
+- persistent virtual-pet lifecycle with care, training, health and battle state
+- branching evolution content across **53 trees**, **930 species records**, and **624 DigiDex entries**
+- redesigned Home, Status, System, Settings, Network and Firmware screens
+- stage-based pixel-art environments and framebuffer-based rendering
+- DigiDex grid, filtering and evolution-tree selection
+- animated CPU battles
+- expanded button navigation including previous/fast-scroll and sleep shortcut
+- redesigned Wi-Fi setup portal with scanning and captive-portal behavior
+- background audio task, volume preview and additional UI/game sound events
+- A/B OTA partitions, HTTPS verification, signed update metadata and SHA-256 firmware integrity checks
+- expanded OTA certificate trust bundle and time synchronization before secure update requests
+
+### One-time USB upgrade from 0.1.x
+
+**Devices running DigiTamer 0.1.x must install 0.2.0 over USB once.** The OTA trust bundle changed in 0.2.0, and older firmware cannot securely bootstrap the new certificate chain. After moving to 0.2.x, compatible later releases are intended to use the normal signed Wi-Fi updater.
+
+See [INSTALLING.md](INSTALLING.md) for the migration and recovery procedure.
 
 ## Installation
 
@@ -44,18 +63,16 @@ Configure Wi-Fi locally
         ↓
 Raise your DigiTamer
         ↓
-Future signed updates over Wi-Fi
+Future compatible signed updates over Wi-Fi
 ```
 
 No compiler, PlatformIO installation, or source checkout is required for normal users.
 
 **Browser installer:** https://mxrkymxrk.github.io/DigiTamer-Firmware/
 
-See [INSTALLING.md](INSTALLING.md) before flashing.
-
 ## Supported hardware
 
-The initial reference target is the **AIPI Lite / ESP32-S3** with a 128×128 color display, ES8311 audio, battery monitoring, and Wi-Fi.
+The initial reference target is the **AIPI Lite / ESP32-S3** with a 128×128 color display, ES8311 audio, battery monitoring, buttons, and Wi-Fi.
 
 Only install firmware explicitly marked for your hardware revision. An incompatible image can prevent normal boot until recovery flashing is performed.
 
@@ -63,14 +80,13 @@ Only install firmware explicitly marked for your hardware revision. An incompati
 
 Official DigiTamer builds are designed around multiple checks rather than trusting a download URL alone:
 
-- authenticated HTTPS transport
+- authenticated HTTPS transport with an embedded CA trust bundle
 - DigiTamer P-256 release-signing key verification
-- board compatibility validation
-- version metadata validation
+- board compatibility and version metadata validation
 - SHA-256 firmware verification before activation
 - separate A/B OTA application slots
-- post-update boot validation and rollback support
-- USB recovery path
+- post-update boot validation / recovery path
+- USB recovery installation
 
 The private signing key is not stored in this public repository or embedded in firmware. The device contains only the public verification key.
 
