@@ -1,6 +1,6 @@
 {
   "name": "DigiTamer",
-  "version": "0.1.2-alpha",
+  "version": "0.1.3-alpha",
   "home_assistant_domain": "",
   "new_install_prompt_erase": true,
   "builds": [
